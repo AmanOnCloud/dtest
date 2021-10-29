@@ -1,0 +1,25 @@
+---
+-
+  name: this is my playbook
+  hosts: ansibleworker
+
+
+  tasks:
+    -
+       name: install apache software
+       yum:
+         name: httpd
+         state: present
+
+    -
+       name: configuration home page
+       copy:
+         dest: /var/www/html/index.html
+         content: "<h1>this is aman</h1>"
+    -
+       name: starting web server
+       service:
+         name: httpd
+         state: started
+         enabled: yes
+
