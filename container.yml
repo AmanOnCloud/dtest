@@ -1,6 +1,6 @@
 ---
 -
-  name: COntainer testing playbook
+  name: Container testing playbook
   hosts: "all"
  
   tasks:
